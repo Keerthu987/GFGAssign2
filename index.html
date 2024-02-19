@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFG 2</title>
+</head>
+<body>
+    <div id="app">
+        <input placeholder="Type Here" name="" id="input" />
+        <p id="input-value"></p>
+        <button id="button">Mirror Out</button>
+        <p id="mirror-value"></p>
+    </div>
+    <script>
+        const input=document.getElementById("input");
+        const btn=document.getElementById("button");
+        const inputVal=document.getElementById("input-value");
+        const mirrorVal=document.getElementById("mirror-value");
+         
+        input.addEventListener("keyup",()=>{
+            inputVal.innerText=input.value;
+        })
+
+        btn.addEventListener("click",()=>{
+            if(input.value.length >0){
+                mirrorVal.innerText=input.value.split("").reverse().join("");
+
+            }
+            else{
+                mirrorVal.innerText=""
+            }
+        })
+
+    </script>
+</body>
+</html>
